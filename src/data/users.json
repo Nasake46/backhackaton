@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "email": "test@gmail.com",
+        "password": "gombo",
+        "nb_defi": 10
+    },
+    {
+        "id": 2,
+        "email": "test2@gmail.com",
+        "password": "foufou",
+        "nb_defi": 20
+    },
+    {
+        "id": 3,
+        "email": "test3@gmail.com",
+        "password": "magnoc",
+        "nb_defi": 30
+    },
+    {
+        "id": 4,
+        "email": "test4@gmail.com",
+        "password": "pastel",
+        "nb_defi": 40
+    },
+    {
+        "id": 5,
+        "email": "test5@gmail.com",
+        "password": "safou",
+        "nb_defi": 50
+    }
+]
