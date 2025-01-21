@@ -4,9 +4,13 @@ const port = 3000
 app.use(express.json());
 const users = require('./data/users.json');
 
+// Route permettant d'utiliser tous les éléments de l'api
+
 app.get('/api', (req, res) => {
   res.send(users)
 })
+
+// Route permettant d'afficher toutes les informations d'une personne via son api
 
 app.get('/api/:id', (req, res) => {
   const id = req.params.id
@@ -26,6 +30,12 @@ app.get('/api/email/:id', (req, res) => {
     res.status(404).send({ error: "Utilisateur non trouvé" });
   }
 })
+
+// app.post('api/adduser', async(req, res) => {
+//   try {
+//     const { email, password}
+//   }
+// })
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
