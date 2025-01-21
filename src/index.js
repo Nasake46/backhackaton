@@ -14,6 +14,19 @@ app.get('/api/:id', (req, res) => {
   res.send(users.find(x => x.id === parseInt(id)));
 })
 
+app.get('/api/email/:id', (req, res) => {
+  const id = req.params.id
+  const user = users.find(x => x.id === parseInt(id));
+
+  if (user) {
+    // Envoi uniquement de l'email
+    res.send({ email: user.email, password: user.password });
+  } else {
+    // Gestion du cas où l'utilisateur n'est pas trouvé
+    res.status(404).send({ error: "Utilisateur non trouvé" });
+  }
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
